@@ -1,0 +1,12 @@
+header {
+    @include center;
+    padding: 20px 0 10px 0;
+
+    .header-logo {
+        width: 165px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,1 +1,97 @@
-/*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.loader {
+  position: absolute;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background-color: rgba(182, 182, 182, 0.2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-in-out;
+  display: none;
+}
+.loader .dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 15px;
+  animation: loader infinite 0.3s alternate;
+}
+.loader .d1 {
+  background-color: #99E2D0;
+}
+.loader .d2 {
+  background-color: #FF79DA;
+  animation-delay: 0.1s;
+}
+.loader .d3 {
+  background-color: #9356DC;
+  animation-delay: 0.2s;
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.container .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #EAEAEA;
+  padding: 15px 0;
+  box-shadow: inset 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.container .reservation {
+  background: #F6F6F6;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.container .reservation h1 {
+  padding: 0 40px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+.container .reservation p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.container .reservation .explore {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+}
+header .header-logo {
+  width: 165px;
+}
+header .header-logo img {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

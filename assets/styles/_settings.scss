@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap');
+
+$titleMenu: 'Shrikhand', cursive;
+$roboto: 'Roboto', sans-serif;
+$purple: #9356DC;
+$pink: #FF79DA;
+$green: #99E2D0;
+
+@mixin gradient {
+    background: rgb(147,86,220);
+    background: linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+}
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
