@@ -12,6 +12,35 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.main-btn {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.main-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .loader {
   position: absolute;
   -webkit-backdrop-filter: blur(15px);
@@ -60,36 +89,18 @@ body {
 }
 .container .reservation {
   background: #F6F6F6;
-  padding: 40px 0 50px 0;
+  padding: 40px 0 60px 0;
   text-align: center;
 }
 .container .reservation h1 {
   padding: 0 40px;
   line-height: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .container .reservation p {
   font-size: 1.1rem;
   font-weight: 300;
-  margin-bottom: 30px;
-}
-.container .reservation .main-btn {
-  background: rgb(147, 86, 220);
-  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  text-decoration: none;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 15px 20px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.2s;
-  cursor: pointer;
-}
-.container .reservation .main-btn:hover {
-  opacity: 0.8;
-  box-shadow: 0 4px 15px 1px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
 }
 .container .fonctionnement {
   padding: 40px 25px 50px 25px;
@@ -111,6 +122,13 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+.container .fonctionnement .btns .btn-container:nth-child(2) .btn-fonctio i {
+  margin-right: 11px;
+}
+.container .fonctionnement .btns .btn-container:last-child .btn-fonctio i {
+  color: #9356DC;
+  margin-right: 10px;
 }
 .container .fonctionnement .btns .btn-container .span-btn {
   height: 25px;
@@ -226,13 +244,31 @@ body {
 .container .restaurants .resto-cards a .card .text-card .icon-heart {
   padding-right: 10px;
   padding-top: 5px;
+  position: relative;
 }
 .container .restaurants .resto-cards a .card .text-card .icon-heart i {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
-.container .restaurants .resto-cards a .card .text-card .icon-heart i:hover {
-  color: rgb(147, 86, 220);
-  color: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+.container .restaurants .resto-cards a .card .text-card .icon-heart i:active {
+  color: #9356DC;
+}
+.container .restaurants .resto-cards a .card .text-card .icon-heart i:active + .full {
+  opacity: 1;
+  visibility: visible;
+}
+.container .restaurants .resto-cards a .card .text-card .icon-heart .full {
+  font-size: 1.55rem;
+  position: absolute;
+  top: 4.5px;
+  right: 9.5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  background: linear-gradient(175deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 header {
@@ -286,4 +322,166 @@ footer .footer-list li i {
 footer .footer-list li a {
   text-decoration: none;
   color: white;
+}
+
+.menu1-container header {
+  position: relative;
+}
+.menu1-container header a {
+  position: absolute;
+  left: 20px;
+  color: black;
+  text-decoration: none;
+}
+.menu1-container header a i {
+  font-size: 1.2rem;
+}
+.menu1-container .restaurant1 .image {
+  width: 100%;
+  height: 250px;
+}
+.menu1-container .restaurant1 .image img {
+  width: 100%;
+  height: 100%;
+}
+.menu1-container .restaurant1 .menu-content {
+  background: #F6F6F6;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  margin-top: -50px;
+  padding: 35px 15px 35px 15px;
+}
+.menu1-container .restaurant1 .menu-content .name-restaurant {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.menu1-container .restaurant1 .menu-content .name-restaurant .title-menu {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.65rem;
+}
+.menu1-container .restaurant1 .menu-content .name-restaurant i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.menu1-container .restaurant1 .menu-content .name-restaurant i:active {
+  color: #9356DC;
+}
+.menu1-container .restaurant1 .menu-content .name-restaurant i:active + :last-child {
+  opacity: 1;
+  visibility: visible;
+}
+.menu1-container .restaurant1 .menu-content .name-restaurant i:last-child {
+  font-size: 1.55rem;
+  position: absolute;
+  top: 5.5px;
+  right: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  background: linear-gradient(175deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container {
+  margin-bottom: 35px;
+  opacity: 0;
+  animation: appear 1.5s forwards;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container:nth-child(3) {
+  animation-delay: 1s;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .title-article {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .title-article::after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background: #99E2D0;
+  display: block;
+  margin-top: 5px;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content:hover .price {
+  transform: translateX(-60px);
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content:hover .validation {
+  width: 60px;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content:hover .validation i {
+  font-size: 1.25rem;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content .meals .title-meal {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content .meals .p-meal {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content .price {
+  transition: 0.3s;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content .price .p-price {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content .validation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  height: 100%;
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu1-container .restaurant1 .menu-content .card-menu-container .card-menu .card-menu-content .validation i {
+  color: white;
+  font-size: 0;
+  transition: 0.3s;
+}
+.menu1-container .restaurant1 .menu-content .btn-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu1-container .restaurant1 .menu-content .btn-menu .main-btn {
+  width: 55%;
 }/*# sourceMappingURL=index.css.map */
