@@ -1,5 +1,5 @@
-.menu1-container {
-
+.menu-container {
+    
     header {
         position: relative;
 
@@ -14,7 +14,7 @@
             }
         }
     }
-    .restaurant1 {
+    .restaurant {
 
         .image {
             width: 100%;
@@ -37,38 +37,46 @@
                 position: relative;
                 display: flex;
                 align-items: baseline;
-                gap: 40px;
+                justify-content: space-between;
                 margin-bottom: 30px;
 
                 .title-menu {
                     font-family: $titleMenu;
                     font-size: 1.65rem;
                 }
-                i {
-                    font-size: 1.5rem;
-                    cursor: pointer;
+                .heart-resto {
 
-                    &:active {
-                        color: $purple;
+                    i {
+                        font-size: 1.5rem;
+                        padding-right: 15px;
+                        cursor: pointer;
+    
+                        &:last-child {
+                            font-size: 1.55rem;
+                            position: absolute;
+                            top: 5.5px;
+                            right: 0;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: 0.2s;
+                            background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            -moz-background-clip: text;
+                            -moz-text-fill-color: transparent;
+                        }
                     }
-                    &:active+:last-child {
-                        opacity: 1;
-                        visibility: visible;
+                    &:hover {
+                        i {
+                            color: purple;
+
+                            &:last-child {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
                     }
-                    &:last-child {
-                        font-size: 1.55rem;
-                        position: absolute;
-                        top: 5.5px;
-                        right: 18px;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: 0.2s;
-                        background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        -moz-background-clip: text;
-                        -moz-text-fill-color: transparent;
-                    }
+                    
                 }
             }
             .card-menu-container {
@@ -119,6 +127,13 @@
 
                         &:hover {
                             
+                            .meals {
+                                max-width: 200px;
+
+                                @media screen and (min-width: 450px) {
+                                    max-width: 100%;
+                                }
+                            }
                             .price {
                                 transform: translateX(-60px);
                             }
@@ -132,15 +147,23 @@
                         }
 
                         .meals {
+                            overflow: hidden;
+                            max-width: 100%;
+                            white-space: nowrap;
+                            transition: max-width 0.3s;
 
                             .title-meal {
                                 font-size: 1.1rem;
                                 font-weight: 500;
                                 margin-bottom: 3px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                             }
                             .p-meal {
                                 font-size: 0.90rem;
                                 font-weight: 300;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                             }
                         }
                         .price {
@@ -148,8 +171,6 @@
 
                             .p-price {
                                 font-weight: 700;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
                             }
                         }
                         .validation {

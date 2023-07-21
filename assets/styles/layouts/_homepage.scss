@@ -9,13 +9,23 @@
     }
     .reservation {
         background: $greyBg;
-        padding: 40px 0 60px 0;
+        padding: 35px 0 60px 0;
         text-align: center;
+
+        @media screen and (min-width: 800px) {
+            padding-bottom: 40px;
+        }
 
         h1 {
             padding: 0 40px;
             line-height: 27px;
             margin-bottom: 15px;
+
+            @media screen and (min-width: 800px) {
+                padding: 0;
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
         }
         p {
             font-size: 1.1rem;
@@ -26,8 +36,23 @@
     .fonctionnement {
         padding: 40px 25px 50px 25px;
 
+        @media screen and (min-width: 700px) {
+            padding: 40px 180px 50px 180px;
+        }
+
         h2 {
             margin-bottom: 20px;
+
+            @media screen and (min-width: 400px) {
+                text-align: center;
+            }
+            @media screen and (min-width: 800px) {
+                margin-bottom: 25px;
+            }
+            @media screen and (min-width: 1402px) {
+                text-align: left;
+                padding-left: 1px;
+            }
         }
         .btns {
             @include center;
@@ -35,10 +60,23 @@
             gap: 20px;
             padding-left: 12px;
 
+            @media screen and (min-width: 400px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px 35px;
+            }
+
             .btn-container {
                 position: relative;
                 @include center;
                 width: 100%;
+
+                @media screen and (min-width: 400px) {
+                    width: 320px;
+                }
+                @media screen and (min-width: 1402px) {
+                    width: 31%;
+                }
 
                 &:nth-child(2) {
 
@@ -98,6 +136,10 @@
         background: $greyBg;
         padding: 40px 20px 50px 20px;
 
+        @media screen and (min-width: 800px) {
+            padding: 30px 180px;
+        }
+
         h2 {
             padding-left: 5px;
             margin-bottom: 20px;
@@ -107,6 +149,49 @@
             flex-direction: column;
             gap: 20px;
 
+            @media screen and (min-width: 1320px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px 100px;
+
+                a.palette {
+                    .card {
+                        .img-card {
+                            img {
+                                object-position: 50% 65%;
+                            }
+                        }
+                    }
+                }
+                a.note {
+                    .card {
+                        .img-card {
+                            img {
+                                object-position: 50% 57%;
+                            }
+                        }
+                    }
+                }
+                a.française {
+                    .card {
+                        .img-card {
+                            img {
+                                object-position: 50% 70%;
+                            }
+                        }
+                    }
+                }
+                a.delice {
+                    .card {
+                        .img-card {
+                            img {
+                                object-position: 50% 68%;
+                            }
+                        }
+                    }
+                }
+            }
+        
             a {
                 width: 100%;
                 text-decoration: none;

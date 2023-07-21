@@ -2,8 +2,16 @@ header {
     @include center;
     padding: 20px 0 10px 0;
 
+    @media screen and (min-width: 800px) {
+        padding: 20px 0;
+    }
+
     .header-logo {
         width: 165px;
+
+        @media screen and (min-width: 800px) {
+            width: 180px;
+        }
 
         img {
             width: 100%;
