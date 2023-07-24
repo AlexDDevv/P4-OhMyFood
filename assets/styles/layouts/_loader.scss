@@ -1,12 +1,25 @@
 .loader {
-    position: absolute;
+    position: fixed;
     backdrop-filter: blur(15px);
     background-color: rgba(182, 182, 182, 0.2);
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
     @include center;
     transition: 1s ease-in-out;
-    display: none;
+    z-index: 1000;
+    animation: hideLoader 4s forwards;
+
+    @keyframes hideLoader {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
 
     .dot {
         width: 50px;

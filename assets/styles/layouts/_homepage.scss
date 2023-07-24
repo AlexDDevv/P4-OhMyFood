@@ -1,4 +1,14 @@
 .container {
+    animation: hideContainer 4s forwards;
+
+    @keyframes hideContainer {
+        0% {
+            opacity: 0
+        }
+        100% {
+            opacity: 1
+        }
+    }
    
     .location {
         @include center;
@@ -13,7 +23,7 @@
         text-align: center;
 
         @media screen and (min-width: 800px) {
-            padding-bottom: 40px;
+            padding-bottom: 45px;
         }
 
         h1 {
@@ -24,7 +34,7 @@
             @media screen and (min-width: 800px) {
                 padding: 0;
                 font-size: 2.5rem;
-                margin-bottom: 30px;
+                margin-bottom: 35px;
             }
         }
         p {
@@ -115,7 +125,7 @@
                     background: $greyBg;
                     border: none;
                     border-radius: 20px;
-                    font-size: 0.95rem;
+                    font-size: 1rem;
                     font-weight: 500;
                     padding: 25px 0 25px 35px;
                     width: 100%;
@@ -262,16 +272,19 @@
                             padding-top: 5px;
                             position: relative;
 
-                            i {
-                                font-size: 1.5rem;
+                            &:hover {
 
-                                &:active {
-                                    color: $purple;
+                                i {
+                                    color: purple;
                                 }
-                                &:active+.full {
+                                .full {
                                     opacity: 1;
                                     visibility: visible;
                                 }
+                            }
+
+                            i {
+                                font-size: 1.5rem;
                             }
                             .full {
                                 font-size: 1.55rem;
