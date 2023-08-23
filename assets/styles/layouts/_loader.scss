@@ -9,7 +9,7 @@
     @include center;
     transition: 1s ease-in-out;
     z-index: 1000;
-    animation: hideLoader 4s forwards;
+    animation: hideLoader 3s forwards;
 
     @keyframes hideLoader {
         0% {
